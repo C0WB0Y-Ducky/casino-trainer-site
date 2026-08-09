@@ -1,15 +1,17 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Casino Trainer Support</title>
+  <title>Casino Trainer | OVRHD Studios</title>
 
-  <meta
-    name="description"
-    content="Support and privacy information for Casino Trainer."
-  >
+<meta
+name="description"
+content="Support, privacy, and legal information for Casino Trainer."
+
+>
 
   <style>
     :root {
@@ -24,6 +26,7 @@
       --muted: #9eada4;
 
       --green: #48c779;
+      --gold: #d6b15e;
     }
 
     * {
@@ -37,7 +40,7 @@
       background:
         radial-gradient(
           circle at top,
-          rgba(42, 130, 76, 0.2),
+          rgba(42, 130, 76, 0.22),
           transparent 500px
         ),
         var(--background);
@@ -54,81 +57,85 @@
     .container {
       width: min(900px, calc(100% - 32px));
       margin: 0 auto;
-      padding: 72px 0 40px;
+      padding: 48px 0 40px;
     }
 
     .brand {
       display: flex;
       align-items: center;
-      gap: 16px;
+      gap: 14px;
 
-      margin-bottom: 48px;
+      margin-bottom: 64px;
     }
 
     .chip {
       display: grid;
+      width: 48px;
+      height: 48px;
+
       place-items: center;
 
-      width: 64px;
-      height: 64px;
-
-      border: 2px solid var(--green);
+      border: 2px dashed var(--gold);
       border-radius: 50%;
 
-      background: var(--surface);
+      background: #123b22;
 
-      color: var(--green);
+      color: var(--text);
 
-      font-size: 18px;
-      font-weight: 800;
+      font-size: 13px;
+      font-weight: 900;
+
+      letter-spacing: 0.08em;
     }
 
     .brand-name {
-      font-weight: 700;
+      font-size: 17px;
+      font-weight: 800;
     }
 
     .brand-studio {
+      margin-top: 2px;
+
       color: var(--muted);
-      font-size: 13px;
+
+      font-size: 12px;
     }
 
     h1 {
-      margin: 0 0 16px;
+      margin: 0 0 18px;
 
-      font-size: clamp(42px, 8vw, 68px);
+      font-size: clamp(48px, 9vw, 76px);
 
-      line-height: 1;
-      letter-spacing: -0.04em;
+      line-height: 0.95;
+      letter-spacing: -0.05em;
     }
 
     .intro {
-      max-width: 650px;
+      max-width: 620px;
 
-      margin: 0 0 48px;
+      margin: 0;
 
       color: var(--muted);
 
-      font-size: 20px;
-      line-height: 1.6;
+      font-size: 19px;
+      line-height: 1.7;
     }
 
     .cards {
       display: grid;
 
-      grid-template-columns:
-        repeat(2, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
 
       gap: 18px;
+
+      margin-top: 56px;
     }
 
     .card {
-      display: flex;
+      position: relative;
 
-      min-height: 210px;
-
-      padding: 26px;
-
-      flex-direction: column;
+      min-height: 240px;
+      padding: 28px;
 
       border: 1px solid var(--border);
       border-radius: 18px;
@@ -140,22 +147,25 @@
       text-decoration: none;
 
       transition:
-        transform 150ms ease,
-        background 150ms ease;
+        transform 160ms ease,
+        border-color 160ms ease,
+        background 160ms ease;
     }
 
     .card:hover {
       transform: translateY(-3px);
 
+      border-color: rgba(72, 199, 121, 0.45);
+
       background: var(--surface-hover);
     }
 
     .label {
-      margin-bottom: 8px;
+      margin-bottom: 20px;
 
       color: var(--green);
 
-      font-size: 12px;
+      font-size: 11px;
       font-weight: 800;
 
       letter-spacing: 0.14em;
@@ -164,31 +174,34 @@
     }
 
     .card h2 {
-      margin: 0 0 10px;
+      margin: 0 0 12px;
 
-      font-size: 27px;
+      font-size: 26px;
     }
 
     .card p {
-      margin: 0;
+      margin: 0 0 32px;
 
       color: var(--muted);
 
-      line-height: 1.6;
+      line-height: 1.65;
     }
 
     .arrow {
-      margin-top: auto;
+      position: absolute;
+
+      right: 26px;
+      bottom: 22px;
 
       color: var(--green);
 
-      font-size: 26px;
+      font-size: 24px;
     }
 
     footer {
       display: flex;
 
-      margin-top: 60px;
+      margin-top: 72px;
       padding-top: 24px;
 
       justify-content: space-between;
@@ -212,18 +225,28 @@
       color: var(--text);
     }
 
-    @media (max-width: 650px) {
-      .container {
-        padding-top: 40px;
-      }
-
+    @media (max-width: 760px) {
       .cards {
         grid-template-columns: 1fr;
       }
 
+      .card {
+        min-height: 200px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding-top: 32px;
+      }
+
+      .brand {
+        margin-bottom: 48px;
+      }
+
       footer {
         flex-direction: column;
-        gap: 10px;
+        gap: 12px;
       }
 
       footer a {
@@ -231,101 +254,131 @@
       }
     }
   </style>
+
 </head>
 
 <body>
   <main class="container">
 
-    <header class="brand">
-      <div class="chip">
-        CT
-      </div>
+```
+<header class="brand">
+  <div class="chip">
+    CT
+  </div>
 
-      <div>
-        <div class="brand-name">
-          Casino Trainer
-        </div>
+  <div>
+    <div class="brand-name">
+      Casino Trainer
+    </div>
 
-        <div class="brand-studio">
-          OVRHD Studios
-        </div>
-      </div>
-    </header>
+    <div class="brand-studio">
+      OVRHD Studios
+    </div>
+  </div>
+</header>
 
-    <section>
-      <h1>
-        Casino Trainer
-      </h1>
+<section>
+  <h1>
+    Casino Trainer
+  </h1>
 
-      <p class="intro">
-        Learn the games. Practice strategies. Build confidence
-        before you reach the table.
-      </p>
-    </section>
+  <p class="intro">
+    Learn the games. Practice strategies. Build confidence
+    before you reach the table.
+  </p>
+</section>
 
-    <section class="cards">
+<section class="cards">
 
-      <a
-        class="card"
-        href="/support/"
-      >
-        <div class="label">
-          Help
-        </div>
+  <a
+    class="card"
+    href="/support/"
+  >
+    <div class="label">
+      Help
+    </div>
 
-        <h2>
-          Support
-        </h2>
+    <h2>
+      Support
+    </h2>
 
-        <p>
-          Get help with your account, gameplay, trainer sessions,
-          bugs, or other Casino Trainer questions.
-        </p>
+    <p>
+      Get help with your account, gameplay, trainer sessions,
+      bugs, or other Casino Trainer questions.
+    </p>
 
-        <div class="arrow">
-          →
-        </div>
-      </a>
+    <div class="arrow">
+      →
+    </div>
+  </a>
 
-      <a
-        class="card"
-        href="/privacy/"
-      >
-        <div class="label">
-          Legal
-        </div>
+  <a
+    class="card"
+    href="/privacy/"
+  >
+    <div class="label">
+      Legal
+    </div>
 
-        <h2>
-          Privacy Policy
-        </h2>
+    <h2>
+      Privacy Policy
+    </h2>
 
-        <p>
-          Learn what information Casino Trainer collects,
-          why we use it, and how your information is handled.
-        </p>
+    <p>
+      Learn what information Casino Trainer collects,
+      why we use it, and how your information is handled.
+    </p>
 
-        <div class="arrow">
-          →
-        </div>
-      </a>
+    <div class="arrow">
+      →
+    </div>
+  </a>
 
-    </section>
+  <a
+    class="card"
+    href="/terms/"
+  >
+    <div class="label">
+      Legal
+    </div>
 
-    <footer>
-      <div>
-        © 2026 OVRHD Studios
-      </div>
+    <h2>
+      Terms of Service
+    </h2>
 
-      <nav>
-        <a href="/support/">
-          Support
-        </a>
+    <p>
+      Review the terms that govern your use of Casino Trainer,
+      including accounts, virtual bankrolls, gameplay, and
+      training features.
+    </p>
 
-        <a href="/privacy/">
-          Privacy
-        </a>
-      </nav>
-    </footer>
+    <div class="arrow">
+      →
+    </div>
+  </a>
+
+</section>
+
+<footer>
+  <div>
+    © 2026 OVRHD Studios
+  </div>
+
+  <nav>
+    <a href="/support/">
+      Support
+    </a>
+
+    <a href="/privacy/">
+      Privacy
+    </a>
+
+    <a href="/terms/">
+      Terms
+    </a>
+  </nav>
+</footer>
+```
 
   </main>
 </body>
