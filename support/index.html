@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Casino Trainer Support</title>
+
+  <meta
+    name="description"
+    content="Get help with Casino Trainer."
+  >
+
+  <style>
+    :root {
+      color-scheme: dark;
+
+      --background: #07110b;
+      --surface: #102017;
+      --surface-hover: #162c20;
+      --border: rgba(255, 255, 255, 0.10);
+
+      --text: #f4f6f5;
+      --muted: #9eada4;
+
+      --green: #48c779;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+
+      background:
+        radial-gradient(
+          circle at top,
+          rgba(42, 130, 76, 0.2),
+          transparent 500px
+        ),
+        var(--background);
+
+      color: var(--text);
+
+      font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    }
+
+    .container {
+      width: min(800px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 56px 0 40px;
+    }
+
+    .back {
+      display: inline-block;
+
+      margin-bottom: 42px;
+
+      color: var(--green);
+
+      font-weight: 600;
+
+      text-decoration: none;
+    }
+
+    .back:hover {
+      text-decoration: underline;
+    }
+
+    .eyebrow {
+      margin-bottom: 10px;
+
+      color: var(--green);
+
+      font-size: 12px;
+      font-weight: 800;
+
+      letter-spacing: 0.14em;
+
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0 0 18px;
+
+      font-size: clamp(42px, 8vw, 64px);
+
+      line-height: 1;
+      letter-spacing: -0.04em;
+    }
+
+    .intro {
+      max-width: 650px;
+
+      margin: 0 0 48px;
+
+      color: var(--muted);
+
+      font-size: 19px;
+      line-height: 1.7;
+    }
+
+    .section {
+      padding: 30px 0;
+
+      border-top: 1px solid var(--border);
+    }
+
+    .section h2 {
+      margin: 0 0 12px;
+
+      font-size: 24px;
+    }
+
+    .section p {
+      margin: 0 0 14px;
+
+      color: var(--muted);
+
+      line-height: 1.7;
+    }
+
+    .topics {
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+      gap: 12px;
+
+      margin-top: 20px;
+    }
+
+    .topic {
+      padding: 18px;
+
+      border: 1px solid var(--border);
+      border-radius: 12px;
+
+      background: var(--surface);
+    }
+
+    .topic strong {
+      display: block;
+
+      margin-bottom: 4px;
+    }
+
+    .topic span {
+      color: var(--muted);
+
+      font-size: 14px;
+    }
+
+    .button {
+      display: inline-block;
+
+      margin-top: 8px;
+      padding: 12px 18px;
+
+      border: 1px solid var(--green);
+      border-radius: 10px;
+
+      color: var(--text);
+
+      font-weight: 700;
+
+      text-decoration: none;
+    }
+
+    .button:hover {
+      background: var(--surface-hover);
+    }
+
+    .report-list {
+      color: var(--muted);
+
+      line-height: 1.8;
+    }
+
+    footer {
+      display: flex;
+
+      margin-top: 40px;
+      padding-top: 24px;
+
+      justify-content: space-between;
+
+      border-top: 1px solid var(--border);
+
+      color: var(--muted);
+
+      font-size: 13px;
+    }
+
+    footer a {
+      margin-left: 20px;
+
+      color: var(--muted);
+
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: var(--text);
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        padding-top: 32px;
+      }
+
+      .topics {
+        grid-template-columns: 1fr;
+      }
+
+      footer {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      footer a {
+        margin: 0 20px 0 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+
+    <a class="back" href="/">
+      ← Casino Trainer
+    </a>
+
+    <header>
+      <div class="eyebrow">
+        OVRHD Studios
+      </div>
+
+      <h1>
+        Support
+      </h1>
+
+      <p class="intro">
+        Need help with Casino Trainer? We're here to help with
+        account issues, gameplay questions, bugs, and feedback.
+      </p>
+    </header>
+
+    <section class="section">
+      <h2>
+        What can we help with?
+      </h2>
+
+      <div class="topics">
+
+        <div class="topic">
+          <strong>Account & Login</strong>
+          <span>
+            Login, profile, username, or account issues.
+          </span>
+        </div>
+
+        <div class="topic">
+          <strong>Gameplay</strong>
+          <span>
+            Questions about Roulette, Blackjack, Craps, or Baccarat.
+          </span>
+        </div>
+
+        <div class="topic">
+          <strong>Strategy Trainer</strong>
+          <span>
+            Help with strategies, recommendations, or practice sessions.
+          </span>
+        </div>
+
+        <div class="topic">
+          <strong>Bug Reports</strong>
+          <span>
+            Something isn't behaving the way you expected.
+          </span>
+        </div>
+
+        <div class="topic">
+          <strong>Feedback</strong>
+          <span>
+            Suggestions for features, improvements, or new strategies.
+          </span>
+        </div>
+
+        <div class="topic">
+          <strong>Privacy & Account Data</strong>
+          <span>
+            Questions about your information or account deletion.
+          </span>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>
+        Contact Support
+      </h2>
+
+      <p>
+        If you need assistance, contact OVRHD Studios and we'll
+        help you with your Casino Trainer issue.
+      </p>
+
+      <!-- Replace this email if needed before App Store submission. -->
+      <a
+        class="button"
+        href="mailto:support@ovrhdstudios.com"
+      >
+        Email Support
+      </a>
+    </section>
+
+    <section class="section">
+      <h2>
+        Reporting a Problem
+      </h2>
+
+      <p>
+        Including a few details can help us troubleshoot your
+        issue faster.
+      </p>
+
+      <ul class="report-list">
+        <li>Your device model</li>
+        <li>Your operating system version</li>
+        <li>Your Casino Trainer app version</li>
+        <li>The game or feature you were using</li>
+        <li>A short description of what happened</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>
+        Privacy
+      </h2>
+
+      <p>
+        For information about how Casino Trainer handles your
+        information, review our Privacy Policy.
+      </p>
+
+      <a class="button" href="/privacy/">
+        View Privacy Policy
+      </a>
+    </section>
+
+    <footer>
+      <div>
+        © 2026 OVRHD Studios
+      </div>
+
+      <nav>
+        <a href="/">
+          Home
+        </a>
+
+        <a href="/privacy/">
+          Privacy
+        </a>
+      </nav>
+    </footer>
+
+  </main>
+</body>
+</html>
